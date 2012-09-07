@@ -22,6 +22,6 @@ class JellyBean < Dessert
   end
   
   def delicious?
-      flavor != "black licorice"
+      flavor.downcase != "black licorice"
   end
 end
