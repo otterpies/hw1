@@ -1,4 +1,16 @@
 class CartesianProduct
   include Enumerable
-  # YOUR CODE HERE
+  
+  def initialize(left, right)
+    @left = left
+    @right = right
+  end
+  
+  def each
+    @left.each do |leftElem|
+      @right.each do |rightElem|
+        yield [leftElem, rightElem]
+      end
+    end
+  end
 end
